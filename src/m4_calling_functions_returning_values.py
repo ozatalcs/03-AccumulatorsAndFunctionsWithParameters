@@ -152,17 +152,17 @@ def run_test_digits_in_cube():
     print('-----------------------------------------------------')
     expected = 8
     answer = digits_in_cube(2)
-    print('expected:', expected)
+    print('Test 1 expected:', expected)
     print('actual', answer)
 
     expected = 9
     answer = digits_in_cube(3)
-    print('expected:', expected)
+    print('Test 2 expected:', expected)
     print('actual', answer)
 
     expected = 10
     answer = digits_in_cube(4)
-    print('expected:', expected)
+    print('Test 3 expected:', expected)
     print('actual', answer)
 
 def digits_in_cube(n):
@@ -202,6 +202,20 @@ def run_test_digits_in_power():
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
 
+    expected = 7
+    answer = digits_in_power(4, 2)
+    print('Test 1 expected', expected)
+    print('actual', answer)
+
+    expected = 9
+    answer = digits_in_power(3, 3)
+    print('Test 2 expected', expected)
+    print('actual', answer)
+
+    expected = 13
+    answer = digits_in_power(4, 4)
+    print('Test 3 expected', expected)
+    print('actual', answer)
 
 def digits_in_power(n, k):
     """
@@ -222,7 +236,8 @@ def digits_in_power(n, k):
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ###########################################################################
     # -------------------------------------------------------------------------
-
+    x = n**k
+    return(sum_of_digits(x))
 
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
