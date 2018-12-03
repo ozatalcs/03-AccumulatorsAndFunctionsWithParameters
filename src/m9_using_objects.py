@@ -14,8 +14,9 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-    #two_circles()
+    two_circles()
     circle_and_rectangle()
+    lines()
 def two_circles():
     """
     -- Constructs an rg.RoseWindow.
@@ -96,11 +97,10 @@ def circle_and_rectangle():
     print('')
     print(rectangle.outline_thickness)
     print(rectangle.fill_color)
-    print(rectangle.corner_1,rectangle.corner_2)
-    print(rectangle.corner_1.x)
-    print(rectangle.corner_1.y)
-    print(rectangle.corner_2.x)
-    print(rectangle.corner_2.y)
+    q = rectangle.get_center()
+    print(q)
+    print(q.x)
+    print(q.y)
 
     window.render()
     window.close_on_mouse_click()
@@ -129,8 +129,14 @@ def lines():
     """
     # TODO: 4. Implement and test this function.
     window = rg.RoseWindow()
-    
-
+    line1 = rg.Line(rg.Point(25,50), rg.Point(100,25))
+    line2 = rg.Line(rg.Point(200,100), rg.Point(75,275))
+    line2.thickness = 3
+    line2.get_midpoint
+    line1.attach_to(window)
+    line2.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
